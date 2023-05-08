@@ -20,6 +20,7 @@ create table korisnik(
 	mobitel varchar(100),
 	mail varchar(50),
 	sifrakorisnika varchar(50),
+	sifradjelatnice varchar(50),
 	adresa varchar(50),
 	vrstausluge varchar,
 );
