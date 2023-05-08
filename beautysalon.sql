@@ -31,8 +31,7 @@ create table usluga(
 	trajanje int,
 );
 
-create table termin
-(
-    datumtermina date,
-    sifrakorisnika varchar(10),
-	);
+create table termin(
+    	datumtermina date,
+    	sifrakorisnika varchar(10),
+);
