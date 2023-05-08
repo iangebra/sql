@@ -8,7 +8,7 @@ use beautysalon;
 create table djelatnica(
 	ime varchar(50),
 	prezime varchar(50),
-	sifradjelatnice varchar(50),
+	sifradjelatnice varchar(10),
 	adresa varchar(50)
 	
 );
@@ -19,8 +19,8 @@ create table korisnik(
 	spol varchar(50),
 	mobitel varchar(100),
 	mail varchar(50),
-	sifrakorisnika varchar(50),
-	sifradjelatnice varchar(50),
+	sifrakorisnika varchar(10),
+	sifradjelatnice varchar(10),
 	adresa varchar(50),
 	vrstausluge varchar,
 );
@@ -28,11 +28,12 @@ create table korisnik(
 create table usluga(
 	vrstausluge varchar(50),
 	cijena decimal, 
-	sifradjelatnice varchar(50),
+	sifradjelatnice varchar(10),
 	trajanje int,
 );
 
 create table termin(
     	datumtermina date,
     	sifrakorisnika varchar(10),
+	sifradjelatnice varchar(10),
 );
