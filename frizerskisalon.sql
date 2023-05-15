@@ -8,7 +8,7 @@ use frizerskisalon;
 create table djelatnica(
 	sifra int not null primary key identity (1,1),
 	ime varchar(50) not null,
-	prezime varchar(50) not null,
+	prezime varchar(51) not null,
 	oib char(11),
 );
 
