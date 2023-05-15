@@ -14,7 +14,7 @@ create table djelatnica(
 );
 
 create table korisnik(
-	ime varchar(50),
+	ime varchar(51),
 	prezime varchar(50),
 	spol varchar(50),
 	mobitel varchar(100),
