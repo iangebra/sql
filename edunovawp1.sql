@@ -1,4 +1,4 @@
--- ovo je komentar i neæe se izvesti
+ï»¿-- ovo je komentar i neÄ‡e se izvesti
 use master;
 drop database if exists edunovawp1;
 go
@@ -36,19 +36,19 @@ create table clan(
 );
 
 
--- veze izmeğu tablica
+-- veze izmeÄ‘u tablica
 
 alter table grupa add foreign key (smjer) references smjer(sifra);
 alter table clan add foreign key (grupa) references grupa(sifra);
 alter table clan add foreign key (polaznik) references polaznik(sifra);
 
 
--- najlošiji naèin
+-- najloÅ¡iji naÄin
 -- 1
 insert into smjer
-values ('Web programiranje ŠÈ',250,1473.82,73,1);
+values ('Web programiranje Å ÄŒ',250,1473.82,73,1);
 
--- malo bolji naèin
+-- malo bolji naÄin
 -- 2
 insert into smjer (naziv,trajanje)
 values ('Java programiranje',130);
@@ -70,33 +70,31 @@ values ('JP28',2,'2023-04-26 19:00:00');
 -- 1 do 25
 insert into polaznik(ime,prezime,oib,email)
 values 
-('Luka','Bušiæ',null,'busic.luka1@gmail.com'),
-('Domagoj','Markoviæ',null,'markovicdomagoj1995@gmail.com'),
+('Luka','BuÅ¡iÄ‡',null,'busic.luka1@gmail.com'),
+('Domagoj','MarkoviÄ‡',null,'markovicdomagoj1995@gmail.com'),
 ('Andrija','Kruhoberec',null,'akruhoberec1@outlook.com'),
-('Vedran','Danko',null,'vedran.dzanko@gmail.com'),
-('Antonio','Majiæ', null, 'antonio.majich@gmail.com'),
-('Lana','Jeleniæ',null,'lana.jelenic@gmail.com'),
-('Jasenka','Augustinoviæ',null,'jaugustinovic85@gmail.com'),
-('Domagoj','Ljubièiæ',null,'dljubicic2@gmail.com'),
+('Vedran','DÅ¾anko',null,'vedran.dzanko@gmail.com'),
+('Antonio','MajiÄ‡', null, 'antonio.majich@gmail.com'),
+('Lana','JeleniÄ‡',null,'lana.jelenic@gmail.com'),
+('Jasenka','AugustinoviÄ‡',null,'jaugustinovic85@gmail.com'),
+('Domagoj','LjubiÄiÄ‡',null,'dljubicic2@gmail.com'),
 ('Leo','Lovenjak',null,'leo.lovenjak107@gmail.com'),
-('Leon','Bièak',null,'lbicak96@gmail.com'),
-('Katarina','Pavlièeviæ',null,'katarina.pavlicevic5@gmail.com'),
-('Darko','Kuèan',null,'dkucan61@gmail.com'),
-('Patrik','Gomerèiæ',null,'patrik.gomercic3@gmail.com'),
-('Antonio','Šubariæ',null,'antonio.subaric98@gmail.com'),
-('Srğan','Filipoviæ',null,'srdjanfilipovic991@gmail.com'),
-('Jakob','Brkiæ',null,'jakobbrkic97@gmail.com'),
+('Leon','BiÄak',null,'lbicak96@gmail.com'),
+('Katarina','PavliÄeviÄ‡',null,'katarina.pavlicevic5@gmail.com'),
+('Darko','KuÄan',null,'dkucan61@gmail.com'),
+('Patrik','GomerÄiÄ‡',null,'patrik.gomercic3@gmail.com'),
+('Antonio','Å ubariÄ‡',null,'antonio.subaric98@gmail.com'),
+('SrÄ‘an','FilipoviÄ‡',null,'srdjanfilipovic991@gmail.com'),
+('Jakob','BrkiÄ‡',null,'jakobbrkic97@gmail.com'),
 ('Alen','Oroz',null,'alen.oroz1@gmail.com'),
-('Ivor','Æeliæ',null,'ivorcelic@gmail.com'),
+('Ivor','Ä†eliÄ‡',null,'ivorcelic@gmail.com'),
 ('Anja','Andonovski',null,'andonovski.anja@gmail.com'),
-('Bruno','Bušiæ',null,'brunobusic20@gmail.com'),
-('Karlo','Periæ',null,'karlocar25@gmail.com'),
-('Kristijan','Beriša',null,'k_berisa@hotmail.com'),
-('Valentin','Mijatoviæ',null,'mijatovic.valentin123@gmail.com'),
+('Bruno','BuÅ¡iÄ‡',null,'brunobusic20@gmail.com'),
+('Karlo','PeriÄ‡',null,'karlocar25@gmail.com'),
+('Kristijan','BeriÅ¡a',null,'k_berisa@hotmail.com'),
+('Valentin','MijatoviÄ‡',null,'mijatovic.valentin123@gmail.com'),
 ('Ivan','Angebrandt',null,'ivan.angebrandt@gmail.com'),
-('Luka','Mrğa',null,'luka.mrda@yahoo.com');
-
-
+('Luka','MrÄ‘a',null,'luka.mrda@yahoo.com');
 
 
 
@@ -106,28 +104,63 @@ values (1,1),(1,2),(1,3),(1,4),(1,5),(1,6),
 (1,15),(1,16),(1,17),(1,18),(1,19),(1,20),
 (1,21),(1,22),(1,23),(1,24),(1,25);
 
-insert into smjer (naziv,trajanje,cijena,upisnina,verificiran)
-values ('PHP programiranje',110,1000.95,50,1);
-insert into grupa (naziv,smjer,datumpocetka)
-values('PP17',4,'2023-05-01 19:00:00');
-insert into grupa (naziv,smjer,datumpocetka)
-values('PP18',4,'2023-05-05 21:00:00');
-insert into polaznik(ime,prezime,oib,email)
-values
-('pero','peric',null,'peroperic@gmail.com'),
-('ivan','ivanovic',null,'ivanivanovic@gmail.com'),
-('marko','markovic',null,'markomarkovic@outlook.com');
 
-insert into clan (grupa, polaznik)
-values (4,26),(4,27),(4,28);
-
-
-
--- vjebanje:
+-- vjeÅ¾banje:
 -- 1. Unijeti smjer PHP programiranje
 -- 2. Na PHP pregoramiranje definirati dvije grupe (PP17 i PP18)
 -- 3. Na PP18 postaviti 3 polaznika (koje ste prethodno unijeli)
 
 
--- Domaæa zadaæa:
+-- DomaÄ‡a zadaÄ‡a:
 -- U sve baze koje ste kreirali na osnovu zadatka ERA osnovno unijeti u svaku tablicu po 3 - 5 redova
+
+
+
+
+
+
+-- PROMJENA PODATAKA
+
+--select * from smjer;
+
+-- ne izvoditi update bez where dijela update naredbe
+
+update smjer set naziv='Web programiranje'
+where sifra=1;
+
+
+-- promjeni cijenu serviseru na 1200 EUR i upisninu na 50 EUR
+update smjer set
+cijena=1200,
+upisnina=50
+where sifra=3;
+
+--select * from grupa;
+
+update grupa set smjer=11 where sifra=1;
+
+
+-- zadatak
+--select * from polaznik;
+-- Ivor Ä†eliÄ‡ se udao. Uzeo je Å¾eninno prezime Herc
+-- Provedite promjenu u bazi
+
+-- Leon BiÄ‡ak ima 
+--novu email adresu: lbicak@ht.hr i njegov oib je 25698545854
+
+
+-- BRISANJE PODATAKA
+
+--select * from clan;
+-- DELETE naredbe su zakomentirane da nam ne pobriÅ¡u podatke
+--delete from clan where grupa=1;
+
+--delete from grupa where smjer=1;
+
+--delete from smjer where sifra=1;
+
+-- moguÄ‡e je promjena i brisanje kroz viÅ¡e tablica
+-- ali o tome nakon spajanja tablica
+
+-- DomaÄ‡a zadaÄ‡a: Za ponedjeljak (22. 05.) na svoj github postaviti 
+-- prvu verziju ER dijagrama zavrÅ¡nog rada kao sliku s papira. 
