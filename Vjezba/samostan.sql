@@ -32,7 +32,7 @@ create table svecenikposao (
 
 alter table svecenikposao add foreign key (svecenik) references svecenik(sifra);
 alter table svecenikposao add foreign key (posao) references posao(sifra);
-alter table svecenik add foreign key (nadredeni) references nadredeni(sifra);
+alter table svecenik add foreign key (nadredeni) references svecenik(sifra);
 
 
 insert into nadredeni(ime,prezime)
@@ -42,8 +42,8 @@ values ('pero','peric'),
 
 insert into svecenik(ime,prezime,nadredeni)
 values ('luka','lukic',1),
-('marko','mihaljevic',3),
-('ivan','ivanovic',2);
+('marko','mihaljevic',2),
+('ivan','ivanovic',3);
 
 insert into posao(naziv)
 values ('posao 1'),
