@@ -6,15 +6,15 @@ go
 use taksisluzba;
 
 create table vozilo (
-    sifra int not null primary key identity(1,1),
-    vrsta varchar(20) not null,
+	sifra int not null primary key identity(1,1),
+	vrsta varchar(20) not null,
 );
 
 create table vozac (
-    sifra int not null primary key identity(1,1),
-    ime varchar(50) not null,
-    prezime varchar(50) not null,
-    vozilo int not null,
+	sifra int not null primary key identity(1,1),
+	ime varchar(50) not null,
+	prezime varchar(50) not null,
+	vozilo int not null,
 );
 
 create table voznja (
@@ -25,15 +25,15 @@ create table voznja (
 );
 
 create table putnik (
-    sifra int not null primary key identity(1,1),
-    ime varchar(50) not null,
-    prezime varchar(50) not null,
-    broj_telefona varchar(50) not null
+	sifra int not null primary key identity(1,1),
+	ime varchar(50) not null,
+	prezime varchar(50) not null,
+	broj_telefona varchar(50) not null
 );
 
 create table voznjaputnik (
-    voznja int not null,
-    putnik int not null
+	voznja int not null,
+	putnik int not null
 );
 
 alter table vozac add foreign key (vozilo) references vozilo(sifra);
