@@ -52,9 +52,9 @@ values ('ivan','anic','3'),
 ('pero','maric','2');
 
 insert into voznja (cijena,datum,vozac)
-values (30.16,'2023-05-21',1),
-(25,'2023-05-20',3),
-(22.5,'2023-05-15',2);
+values (30.16,'2023-05-21',2),
+(25,'2023-05-20',1),
+(22.5,'2023-05-15',3);
 
 insert into putnik (ime,prezime,broj_telefona)
 values ('ivana','mosic','09912345'),
