@@ -5,7 +5,6 @@ create database taksisluzba;
 go
 use taksisluzba;
 
-
 create table vozilo (
     sifra int not null primary key identity(1,1),
     vrsta varchar(20) not null,
