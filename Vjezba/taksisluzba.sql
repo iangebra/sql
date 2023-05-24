@@ -20,7 +20,7 @@ create table vozac (
 create table voznja (
     sifra int not null primary key identity(1,1),
     cijena decimal not null,
-	datum datetime not null,    
+	datum datetime not null,
     vozac int not null,
 );
 
