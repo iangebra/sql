@@ -86,3 +86,42 @@ alter table mladic add foreign key (muskarac) references muskarac(sifra);
 alter table zena add foreign key (sestra) references sestra(sifra);
 alter table sestra_svekar add foreign key (sestra) references sestra(sifra);
 alter table sestra_svekar add foreign key (svekar) references svekar(sifra);
+
+
+insert into muskarac (bojaociju,hlace,modelnaocala,maraka,zena)
+values ('plava','jeans','gucci',50,1),
+('smedja','kratke','ray-ban',127.56,2),
+('zelena','trenirka','armani',199.99,3);
+
+insert into zena(treciputa,hlace,kratkamajica,jmbag,bojaociju,haljina,sestra)
+values ('2022-04-15','kratke','plava',48703210541,'plava','bijela',1),
+('2023-02-11','jeans','crvena',63595313852,'crna','crvena',2),
+('2022-10-17','yoga','zelena',87435842124,'smedja','zelena',3);
+
+insert into sestra(introvertno,haljina,maraka,hlace,narukvica)
+values (0,'bijela',100,'sive',1),
+(1,'plava',200,'jeans',2),
+(1,'zelena',400.33,'kratke',3);
+
+
+insert into svekar(bojaociju,prstena,dukserica,lipa,eura,majica)
+values ('crna',1,'crna',55,19.99,'dugacka'),
+('plava,',2,'zuta',21,5,'dolcevita'),
+('smedja',3,'crvena',15,75.43,'kratka');
+
+
+insert into sestra_svekar(sestra,svekar)
+values (1,2),
+(2,1),
+(3,3);
+
+
+update cura set gustoca = 15.77;
+
+delete from mladic where kuna > 15.78;
+
+select kratkamajica from zena where hlace like '%ana%'
+
+select a.haljina, a.maraka
+from sestra a left join sestra_svekar b 
+on b.sestra = a.sifra;
