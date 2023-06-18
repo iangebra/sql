@@ -13,7 +13,7 @@ create table punac(
 );
 
 create table cura(
-sifra int not null primary key identity(1,1),
+	sifra int not null primary key identity(1,1),
 	novcica decimal(16,5) not null,
 	gustoca decimal(18,6) not null,
 	lipa decimal(13,10),
@@ -45,7 +45,7 @@ create table mladic(
 );
 
 create table zena(
-sifra int not null primary key identity(1,1),
+	sifra int not null primary key identity(1,1),
 	treciputa datetime,
 	hlace varchar(46),
 	kratkamajica varchar(31) not null,
