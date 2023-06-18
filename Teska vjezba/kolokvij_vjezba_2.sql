@@ -101,8 +101,7 @@ values ('plava','2021-12-11','zelena',1,'1','zuta',1),
 	('siva','2022-01-16','crna',3,'1','ljubicasta',3);
 
 insert into neprijatelj (majica,haljina,lipa,modelnaocala,kuna,jmbag,cura)
-values
-	('bijela','crvena','1.23','gucci','55.52','58266368321',1),
+values ('bijela','crvena','1.23','gucci','55.52','58266368321',1),
 	('plava','zuta','2.57','ray-ban','1200.46','68326937315',2),
 	('siva','zelena','6.11','versace','5.78','18250638352',3);
 
