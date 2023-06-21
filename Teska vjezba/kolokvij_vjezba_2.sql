@@ -124,5 +124,5 @@ on f.neprijatelj=e.sifra
 where d.drugiputa is not null and c.vesta like '%ba%'
 order by e.haljina desc;
 
-select decko.vesta, decko.asocijalno from decko
-where sifra not in ( select decko from decko_zarucnica);
+select a.vesta,a.asocijalno from decko a 
+left join decko_zarucnica b on a.sifra=b.sifra;
